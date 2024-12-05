@@ -1,0 +1,23 @@
+[workspace]
+authors = ["Wolf Vollprecht <w.vollprecht@gmail.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "build-recipe"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+preview = ["pixi-build"]
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+bzip2 = { path = "./recipes/bzip2" }
+
+# [build-variants.options]
+# inherit-from = "conda-forge"
+# zip_keys = [["python", "numpy"],]
+
+# [build-variants.keys]
+# python = ["3.12", "3.11"]
+# numpy = ["1.21", "1.20"]
+# c_compiler = ["gcc"]
