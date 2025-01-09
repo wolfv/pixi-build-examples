@@ -12,8 +12,8 @@ description = "Showcases how to create a simple C++ executable with Pixi"
 name = "boost-check"
 version = "0.1.0"
 
-[build-system]
-build-backend = { name = "pixi-build-cmake", version = "*" }
+[package.build]
+backend = { name = "pixi-build-cmake", version = "*" }
 channels = [
   "https://prefix.dev/pixi-build-backends",
   "https://prefix.dev/conda-forge",
