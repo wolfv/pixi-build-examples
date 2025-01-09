@@ -22,7 +22,7 @@ channels = [
 [tasks.start]
 cmd = "boost-checker"
 
-[host-dependencies]
+[package.host-dependencies]
 boost = "*"
 
 [dependencies]
