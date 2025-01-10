@@ -1,0 +1,11 @@
+[project]
+authors = ["Wolf Vollprecht <w.vollprecht@gmail.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "build-feedstock"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+preview = ["pixi-build"]
+
+[dependencies]
+networkx = { git = "https://github.com/conda-forge/networkx-feedstock", subdirectory = "recipe/"}
