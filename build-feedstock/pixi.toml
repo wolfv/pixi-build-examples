@@ -1,4 +1,4 @@
-[project]
+[workspace]
 authors = ["Wolf Vollprecht <w.vollprecht@gmail.com>"]
 channels = ["conda-forge"]
 description = "Add a short description here"
@@ -7,5 +7,18 @@ platforms = ["osx-arm64"]
 version = "0.1.0"
 preview = ["pixi-build"]
 
+[workspace.build-variants]
+python_min = ["3.9"]
+
+# [workspace.target.osx.build-variants]
+# c_stdlib = ["macosx_deployment_target"]
+# c_stdlib_version = ["11.0"]
+# c_compiler = ["clang"]
+# rust_compiler = ["rust"]
+
 [dependencies]
-networkx = { git = "https://github.com/conda-forge/networkx-feedstock", subdirectory = "recipe/"}
+# networkx = { git = "https://github.com/conda-forge/networkx-feedstock", subdirectory = "recipe/"}
+# plip = { git = "https://github.com/conda-forge/plip-feedstock", subdirectory = "recipe/"}
+# shell = { git = "https://github.com/conda-forge/shell-feedstock", subdirectory = "recipe/"}
+pytest-order = { git = "https://github.com/conda-forge/pytest-order-feedstock", subdirectory = "recipe/" }
+# pytest-order = { path = "./pytest-order-feedstock/recipe/recipe.yaml" }

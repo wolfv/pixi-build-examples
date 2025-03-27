@@ -1,0 +1,61 @@
+version: 6
+environments:
+  default:
+    channels:
+    - url: https://prefix.dev/conda-forge/
+    packages:
+      linux-64:
+      - conda: .
+        subdir: linux-64
+      osx-64:
+      - conda: .
+        subdir: osx-64
+      osx-arm64:
+      - conda: .
+        subdir: osx-arm64
+      win-64:
+      - conda: .
+        subdir: win-64
+packages:
+- conda: .
+  name: build-rust
+  version: 0.1.0
+  build: hbf21a9e_0
+  subdir: linux-64
+  constrains:
+  - __glibc >=2.17
+  input:
+    hash: 3f31d98acf3e8b4cdbfd8758884850834255742c7ea90de7a7a8c53caf608b65
+    globs:
+    - pixi.toml
+- conda: .
+  name: build-rust
+  version: 0.1.0
+  build: hbf21a9e_0
+  subdir: osx-64
+  constrains:
+  - __osx >=10.13
+  input:
+    hash: 3f31d98acf3e8b4cdbfd8758884850834255742c7ea90de7a7a8c53caf608b65
+    globs:
+    - pixi.toml
+- conda: .
+  name: build-rust
+  version: 0.1.0
+  build: hbf21a9e_0
+  subdir: osx-arm64
+  constrains:
+  - __osx >=11.0
+  input:
+    hash: 3f31d98acf3e8b4cdbfd8758884850834255742c7ea90de7a7a8c53caf608b65
+    globs:
+    - pixi.toml
+- conda: .
+  name: build-rust
+  version: 0.1.0
+  build: hbf21a9e_0
+  subdir: win-64
+  input:
+    hash: 3f31d98acf3e8b4cdbfd8758884850834255742c7ea90de7a7a8c53caf608b65
+    globs:
+    - pixi.toml
