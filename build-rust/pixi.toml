@@ -8,10 +8,8 @@ preview = ["pixi-build"]
 version = "0.1.0"
 
 [package]
-# authors = ["Nichita Morcotilo <nichita@prefix.dev>"]
-# description = "Showcases how to build a python project with pixi"
 name = "build-rust"
-version = "0.1.0"
+version = "0.1.0" 
 
 [dependencies]
 build-rust = { path = "." }

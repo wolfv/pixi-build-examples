@@ -1,0 +1,14 @@
+[workspace]
+authors = ["Wolf Vollprecht <w.vollprecht@gmail.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "build-python"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+preview = ["pixi-build"]
+
+[tasks]
+start = "python3.14"
+
+[dependencies]
+python = { path = "./recipe/recipe.yaml" }
