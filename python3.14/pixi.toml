@@ -11,4 +11,4 @@ preview = ["pixi-build"]
 start = "python3.14"
 
 [dependencies]
-python = { path = "./recipe/recipe.yaml" }
+python = { path = "./recipe" }

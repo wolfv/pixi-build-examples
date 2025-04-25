@@ -23,7 +23,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/xorg-libx11-1.8.12-h6a5fb8c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/xorg-libxau-1.0.12-h5505292_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/xorg-libxdmcp-1.1.5-hd74edd7_0.conda
-      - conda: ./recipe/recipe.yaml
+      - conda: ./recipe
 packages:
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/bzip2-1.0.8-h99b78c6_7.conda
   sha256: adfa71f158cbd872a36394c56c3568e6034aa55c623634b37a4836bd036e6b91
@@ -147,28 +147,28 @@ packages:
   license_family: MIT
   size: 8381
   timestamp: 1726802424786
-- conda: ./recipe/recipe.yaml
+- conda: ./recipe
   name: python
   version: 3.14.0a7
   build: h60d57d3_0
   subdir: osx-arm64
   depends:
   - libcxx >=20
+  - bzip2 >=1.0.8,<2.0a0
   - liblzma >=5.8.1,<6.0a0
-  - libzlib >=1.3.1,<2.0a0
-  - readline >=8.2,<9.0a0
+  - ncurses >=6.5,<7.0a0
   - openssl >=3.5.0,<4.0a0
+  - xorg-libx11 >=1.8.12,<2.0a0
+  - readline >=8.2,<9.0a0
+  - tk >=8.6.13,<8.7.0a0
+  - libmpdec >=4.0.0,<5.0a0
   - libexpat >=2.7.0,<3.0a0
   - libsqlite >=3.49.1,<4.0a0
-  - tk >=8.6.13,<8.7.0a0
-  - xorg-libx11 >=1.8.12,<2.0a0
   - libffi >=3.4.6,<3.5.0a0
-  - bzip2 >=1.0.8,<2.0a0
-  - libmpdec >=4.0.0,<5.0a0
-  - ncurses >=6.5,<7.0a0
+  - libzlib >=1.3.1,<2.0a0
   license: Python-2.0
   input:
-    hash: '0000000000000000000000000000000000000000000000000000000000000000'
+    hash: 2338e12599d23d3801616f14b041e7d2e6d31474e19f3cbaaa147b8bb5269bce
     globs:
     - recipe.yaml
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/readline-8.2-h1d1bf99_2.conda
