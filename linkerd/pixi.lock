@@ -1,0 +1,19 @@
+version: 6
+environments:
+  default:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge/
+    packages:
+      osx-arm64:
+      - conda: ./recipes/linkerd
+packages:
+- conda: ./recipes/linkerd
+  name: linkerd
+  version: 25.5.2
+  build: h60d57d3_0
+  subdir: osx-arm64
+  license: Apache-2.0
+  input:
+    hash: d33e5627b994f971042f95e528bf129c4ff8b0a5f83e79db15477b3fd965667b
+    globs:
+    - recipe.yaml
