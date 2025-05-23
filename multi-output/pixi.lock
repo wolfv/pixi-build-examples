@@ -1,0 +1,34 @@
+version: 6
+environments:
+  default:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge/
+    packages:
+      osx-arm64:
+      - conda: ./recipe/recipe.yaml
+        name: foobar
+      - conda: ./recipe/recipe.yaml
+        name: foobar-desktop
+packages:
+- conda: ./recipe/recipe.yaml
+  name: foobar
+  version: 0.1.0
+  build: h60d57d3_0
+  subdir: osx-arm64
+  input:
+    hash: '0000000000000000000000000000000000000000000000000000000000000000'
+    globs:
+    - recipe.yaml
+    - recipe.yaml
+- conda: ./recipe/recipe.yaml
+  name: foobar-desktop
+  version: 0.1.0
+  build: h60d57d3_0
+  subdir: osx-arm64
+  depends:
+  - foobar
+  input:
+    hash: '0000000000000000000000000000000000000000000000000000000000000000'
+    globs:
+    - recipe.yaml
+    - recipe.yaml

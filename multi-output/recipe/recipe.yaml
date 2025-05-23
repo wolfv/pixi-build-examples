@@ -1,0 +1,29 @@
+recipe:
+  name: multi-output
+  version: "0.1.0"
+
+outputs:
+  - package:
+      name: foobar
+
+    build:
+      script:
+        - echo "Building foobar" > $PREFIX/foobar.txt
+  
+  - package:
+      name: bizbar
+
+    build:
+      script:
+        - echo "Building bizbar" > $PREFIX/bizbar.txt
+    
+  - package:
+      name: foobar-desktop
+
+    requirements:
+      run:
+        - foobar
+
+    build:
+      script:
+        - echo "Building foobar-desktop" > $PREFIX/foobar-desktop.txt
