@@ -1,0 +1,25 @@
+[workspace]
+channels = ["conda-forge"]
+name = "wave"
+platforms = ["win-64"]
+version = "0.1.0"
+preview = ["pixi-build"]
+
+[tasks]
+start = "wave"
+
+[dependencies]
+wave = { path = "." }
+
+[package.build]
+backend = { name = "pixi-build-cmake", version = "*" }
+channels = [
+  "https://prefix.dev/pixi-build-backends",
+  "https://prefix.dev/conda-forge",
+]
+
+[package.build-dependencies]
+cuda-nvcc = ">=12.9.86,<13"
+
+[package.host-dependencies]
+libcurand-dev = ">=10.3.10.19,<11"
